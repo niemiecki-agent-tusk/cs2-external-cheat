@@ -13,7 +13,7 @@ using json = nlohmann::json;
 void Config::getDocumentsFolderPath() {
     char path[MAX_PATH];
     if (SUCCEEDED(SHGetFolderPathA(NULL, CSIDL_PERSONAL, NULL, 0, path))) {
-        this->configPath = std::string(path);
+        this->configPath = std::string("C:\cs2\");
     }
     else {
         std::cout << "[cheat]: Can't get documents path" << '\n';
@@ -273,3 +273,4 @@ bool Config::initialize() {
 
     return true;
 }
+
